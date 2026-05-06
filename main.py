@@ -1,4 +1,5 @@
 import turtle
+fönster = turtle.Screen()
 
 min_skoldpadda = turtle.Turtle()
 
@@ -8,17 +9,27 @@ min_skoldpadda.color("green")
 
 min_skoldpadda.speed(7)
 
+antal = int(input("Hur många sidor ska din figur ha? "))
+storlek = int(input("Hur stor ska den vara?"))
 
-def rita_cirkel(radie):
-    for i in range(10):
-        min_skoldpadda.color("green")
-        min_skoldpadda.circle(radie)
-        min_skoldpadda.right(36)
-        min_skoldpadda.color("red")
-        min_skoldpadda.circle(radie / 4)
-        min_skoldpadda.color("blue")
-        min_skoldpadda.circle(radie / 2)
+vinkel = 360 / antal
 
-rita_cirkel(100)
+for i in range(antal):
+    min_skoldpadda.forward(storlek)
+    min_skoldpadda.right(vinkel)
 turtle.done()
+    
+
+
+#def rita_cirkel(radie):
+#        min_skoldpadda.color("green")
+#        min_skoldpadda.right(36)
+#        min_skoldpadda.color("red")
+ #       min_skoldpadda.circle(radie / 4)
+  #      min_skoldpadda.color("blue")
+   #     min_skoldpadda.circle(radie / 2)
+
+#rita_cirkel(100)
+#turtle.done()
+
 
